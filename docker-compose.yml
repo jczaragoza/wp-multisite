@@ -50,7 +50,7 @@ services:
       - ./config/php.conf.ini:/usr/local/etc/php/conf.d/php.ini   
     restart: unless-stopped
     ports:
-      - "80:80" 
+      - "8000:80" 
     environment:
       WORDPRESS_DB_HOST: db:3306
       WORDPRESS_DB_USER: userwp
