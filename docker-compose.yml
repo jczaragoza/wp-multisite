@@ -12,13 +12,13 @@ services:
       - db_data:/var/lib/mysql
     restart: unless-stopped
     ports:
-      - "3306:3306"    
+      - "3307:3307"    
     environment:
       DB_HOST: localhost
-      MYSQL_ROOT_PASSWORD: p4ssw0rd
+      MYSQL_ROOT_PASSWORD: Avenger2012
       MYSQL_DATABASE: wordpress
       MYSQL_USER: userwp
-      MYSQL_PASSWORD: p4ssw0rd
+      MYSQL_PASSWORD: Avenger2012
     networks:
       - wpsite1
 
@@ -34,7 +34,7 @@ services:
       - "8080:80"
     environment:
       PMA_HOST: db
-      MYSQL_ROOT_PASSWORD: p4ssw0rd
+      MYSQL_ROOT_PASSWORD: Avenger2012
     networks:
       - wpsite1
 
@@ -54,7 +54,7 @@ services:
     environment:
       WORDPRESS_DB_HOST: db:3306
       WORDPRESS_DB_USER: userwp
-      WORDPRESS_DB_PASSWORD: p4ssw0rd
+      WORDPRESS_DB_PASSWORD: Avenger2012
       WORDPRESS_TABLE_PREFIX: 'myn_' 
       WORDPRESS_CONFIG_EXTRA: |
         define('WP_ALLOW_MULTISITE', true);
